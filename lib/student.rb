@@ -48,24 +48,24 @@ class Student
   student = self.new(name, grade)
   student.save
   student
-end
+  end
 
-def self.new_from_db(array)
+  def self.new_from_db(array)
   new_student = self.new(array[1], array[2], array[0])
   new_student
-end
+  end
 
-def self.find_by_name(name)
+  def self.find_by_name(name)
   sql =<<-SQL
 
   SQL
   DB[:conn].execute(sql)
-end
+  end
 
-def update
+  def update
   sql = "UPDATE students SET name = ?, grade = ? WHERE id = ?"
   DB[:conn].execute(sql, self.name, self.grade, self.id)
-end
+  end
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
 
