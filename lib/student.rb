@@ -10,6 +10,12 @@ class Student
     @id = id
   end
 
+  def self.create_table
+    sql <<-SQL 
+
+
+    SQL
+    DB[:conn].execute(sql)
 
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
