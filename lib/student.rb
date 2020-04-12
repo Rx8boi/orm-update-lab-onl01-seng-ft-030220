@@ -50,8 +50,9 @@ end
 def self.new_from_db(array)
   new_student = self.new(array[1], array[2], array[0])
   new_student
-  # create a new Student object given a row from the database
 end
+
+
   # Remember, you can access your database connection anywhere in this class
   #  with DB[:conn]
 
